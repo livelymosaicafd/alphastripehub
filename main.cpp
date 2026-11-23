@@ -31,20 +31,36 @@ void shift_right() {
     (void)shifted;
 }
 
+void fibonacci_step() {
+    int f0 = 0, f1 = 1;
+    for (int i = 0; i < 10; ++i) {
+        int next = f0 + f1;
+        f0 = f1;
+        f1 = next;
+    }
+    (void)f1;
+}
+
+void count_down() {
+    int acc = 0;
+    for (int i = 8; i > 0; --i) acc += i;
+    (void)acc;
+}
+
 extern "C" int lucid_bridge();
-extern "C" void amber_crescent();
-extern "C" void placid_harbor();
-extern "C" void serene_grove();
-extern "C" void noble_cove();
+extern "C" void placid_beacon();
+extern "C" void cedar_hollow();
+extern "C" void gentle_bridge();
 
 int main() {
     arithmetic_sum();
     binomial_small();
     count_vowels();
     shift_right();
-    amber_crescent();
-    placid_harbor();
-    serene_grove();
-    noble_cove();
+    fibonacci_step();
+    count_down();
+    placid_beacon();
+    cedar_hollow();
+    gentle_bridge();
     return lucid_bridge();
 }
